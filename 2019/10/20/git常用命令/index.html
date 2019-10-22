@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://Webwwl.github.io">
   <title>Git常用命令 | 吴文亮的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="初始化1git init   新建仓库时是没有master分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch .">
+  <meta name="description" content="初始化1git init   新建仓库时是没有 master 分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch">
 <meta name="keywords" content="工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="https://Webwwl.github.io/2019/10/20/git常用命令/index.html">
 <meta property="og:site_name" content="吴文亮的个人网站">
-<meta property="og:description" content="初始化1git init   新建仓库时是没有master分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch .">
+<meta property="og:description" content="初始化1git init   新建仓库时是没有 master 分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-20T06:47:06.826Z">
+<meta property="og:updated_time" content="2019-10-22T08:32:54.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用命令">
-<meta name="twitter:description" content="初始化1git init   新建仓库时是没有master分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch .">
+<meta name="twitter:description" content="初始化1git init   新建仓库时是没有 master 分支的,提交后才有 可以新建.gitignore文件设置忽略文件,示例：  1234node_modules/dist/gulp/src/*.html   如果忘记新建.gitignore文件,node_modules/文件已被添加进缓存区,此时新增该文件不生效，可进行如下操作  123git rm -r --cached .touch">
   
     <link rel="alternative" href="/atom.xml" title="吴文亮的个人网站" type="application/atom+xml">
   
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
         <h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>新建仓库时是没有master分支的,提交后才有 <br><br>可以新建<code>.gitignore</code>文件设置忽略文件,示例：</p>
+<p>新建仓库时是没有 master 分支的,提交后才有 <br><br>可以新建<code>.gitignore</code>文件设置忽略文件,示例：</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node_modules/</span><br><span class="line">dist/</span><br><span class="line">gulp/</span><br><span class="line">src/*.html</span><br></pre></td></tr></table></figure>
 
@@ -197,16 +197,15 @@ var _hmt = _hmt || [];
 
 <a id="more"></a>
 
-
 <h4 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
 
 <h4 id="美化日志"><a href="#美化日志" class="headerlink" title="美化日志"></a>美化日志</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --pretty==oneline</span><br></pre></td></tr></table></figure>
 
 <h4 id="查看某个文件的提交历史"><a href="#查看某个文件的提交历史" class="headerlink" title="查看某个文件的提交历史"></a>查看某个文件的提交历史</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log filename</span><br></pre></td></tr></table></figure>
 
-<h4 id="查看某个文件提交历史diff"><a href="#查看某个文件提交历史diff" class="headerlink" title="查看某个文件提交历史diff"></a>查看某个文件提交历史diff</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log -p filename</span><br></pre></td></tr></table></figure>
+<h4 id="查看某个文件提交历史-diff"><a href="#查看某个文件提交历史-diff" class="headerlink" title="查看某个文件提交历史 diff"></a>查看某个文件提交历史 diff</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log -p filename</span><br></pre></td></tr></table></figure>
 
-<h4 id="查看某个文件某次提交diff"><a href="#查看某个文件某次提交diff" class="headerlink" title="查看某个文件某次提交diff"></a>查看某个文件某次提交diff</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show &lt;commit hash&gt; filename</span><br></pre></td></tr></table></figure>
+<h4 id="查看某个文件某次提交-diff"><a href="#查看某个文件某次提交-diff" class="headerlink" title="查看某个文件某次提交 diff"></a>查看某个文件某次提交 diff</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show &lt;commit hash&gt; filename</span><br></pre></td></tr></table></figure>
 
 <h4 id="查看大致修改内容"><a href="#查看大致修改内容" class="headerlink" title="查看大致修改内容"></a>查看大致修改内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --stat</span><br></pre></td></tr></table></figure>
 
@@ -223,7 +222,7 @@ var _hmt = _hmt || [];
 
 <h4 id="查看当前仓库状态"><a href="#查看当前仓库状态" class="headerlink" title="查看当前仓库状态"></a>查看当前仓库状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
-<h4 id="查看wroksapce的修改内容"><a href="#查看wroksapce的修改内容" class="headerlink" title="查看wroksapce的修改内容"></a>查看wroksapce的修改内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
+<h4 id="查看-wroksapce-的修改内容"><a href="#查看-wroksapce-的修改内容" class="headerlink" title="查看 wroksapce 的修改内容"></a>查看 wroksapce 的修改内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff</span><br></pre></td></tr></table></figure>
 
 <h4 id="查看暂存区的修改"><a href="#查看暂存区的修改" class="headerlink" title="查看暂存区的修改"></a>查看暂存区的修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --staged === git diff --cached</span><br></pre></td></tr></table></figure>
 
@@ -240,7 +239,7 @@ var _hmt = _hmt || [];
 <h4 id="将远程分支取回本地"><a href="#将远程分支取回本地" class="headerlink" title="将远程分支取回本地"></a>将远程分支取回本地</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin [&lt;remoteBranch&gt;]</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>默认取回所有更新,可在本地分支上merge这些分支</p>
+<p>默认取回所有更新,可在本地分支上 merge 这些分支</p>
 </blockquote>
 <h4 id="取回分支更新并合并"><a href="#取回分支更新并合并" class="headerlink" title="取回分支更新并合并"></a>取回分支更新并合并</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull [--rebase] &lt;origin&gt; [&lt;remoteBranch&gt;:&lt;localBranch&gt;]</span><br></pre></td></tr></table></figure>
 
@@ -248,7 +247,7 @@ var _hmt = _hmt || [];
 <p>默认与当前分支合并</p>
 </blockquote>
 <h4 id="git-fetch-和-git-pull-的区别"><a href="#git-fetch-和-git-pull-的区别" class="headerlink" title="git fetch 和 git pull 的区别"></a>git fetch 和 git pull 的区别</h4><blockquote>
-<p>git fetch会将远程分支更新拉到本地的远程分支，git Pull会将远程分支更新拉到本地并与本地分支合并</p>
+<p>git fetch 会将远程分支更新拉到本地的远程分支，git Pull 会将远程分支更新拉到本地并与本地分支合并</p>
 </blockquote>
 <h3 id="推送本地分支更新到远程"><a href="#推送本地分支更新到远程" class="headerlink" title="推送本地分支更新到远程"></a>推送本地分支更新到远程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push &lt;origin&gt; &lt;localBrach&gt;:&lt;remoteBranch&gt;</span><br></pre></td></tr></table></figure>
 
@@ -271,38 +270,38 @@ var _hmt = _hmt || [];
 
 <h3 id="提取并删除缓存"><a href="#提取并删除缓存" class="headerlink" title="提取并删除缓存"></a>提取并删除缓存</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash pop &lt;stash@&#123;&#125;&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="覆盖本地上次commit"><a href="#覆盖本地上次commit" class="headerlink" title="覆盖本地上次commit"></a>覆盖本地上次commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend &quot;message&quot; or git commit --amend --no-edit</span><br></pre></td></tr></table></figure>
+<h3 id="覆盖本地上次-commit"><a href="#覆盖本地上次-commit" class="headerlink" title="覆盖本地上次 commit"></a>覆盖本地上次 commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend &quot;message&quot; or git commit --amend --no-edit</span><br></pre></td></tr></table></figure>
 
-<h3 id="覆盖远程仓库上次commit"><a href="#覆盖远程仓库上次commit" class="headerlink" title="覆盖远程仓库上次commit"></a>覆盖远程仓库上次commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;branchName&gt; -f</span><br></pre></td></tr></table></figure>
+<h3 id="覆盖远程仓库上次-commit"><a href="#覆盖远程仓库上次-commit" class="headerlink" title="覆盖远程仓库上次 commit"></a>覆盖远程仓库上次 commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;branchName&gt; -f</span><br></pre></td></tr></table></figure>
 
 <h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagName&gt; // 切换到指定分支，打上标签</span><br><span class="line">git tag  // 列出所有标签</span><br><span class="line">git branch &lt;branch-name&gt;  &lt;tag-name&gt; //创建分支并打上tag</span><br><span class="line">git checkout &lt;tag-name&gt;  // 切换到指定tag</span><br></pre></td></tr></table></figure>
 
 <h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge branchName</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>只能从之前的commit合并较新的commit，否则会提示`already update</p>
+<p>只能从之前的 commit 合并较新的 commit，否则会提示`already update</p>
 </blockquote>
 <h4 id="git-tree"><a href="#git-tree" class="headerlink" title="git tree"></a>git tree</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline --graph --decorate --all</span><br></pre></td></tr></table></figure>
 
-<h4 id="回溯修改"><a href="#回溯修改" class="headerlink" title="回溯修改"></a>回溯修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i HEAD^^</span><br><span class="line">change something...</span><br><span class="line">git commit --amend </span><br><span class="line">git rebase --continue</span><br></pre></td></tr></table></figure>
+<h4 id="回溯修改"><a href="#回溯修改" class="headerlink" title="回溯修改"></a>回溯修改</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i HEAD^^</span><br><span class="line">change something...</span><br><span class="line">git commit --amend</span><br><span class="line">git rebase --continue</span><br></pre></td></tr></table></figure>
 
 <h3 id="rebase"><a href="#rebase" class="headerlink" title="rebase"></a>rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase 目标commit</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>默认起点是交叉点</p>
 </blockquote>
-<h3 id="给rebase指定起点终点"><a href="#给rebase指定起点终点" class="headerlink" title="给rebase指定起点终点"></a>给rebase指定起点终点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase --onto &lt;target&gt; &lt;start&gt; &lt;end&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="给-rebase-指定起点终点"><a href="#给-rebase-指定起点终点" class="headerlink" title="给 rebase 指定起点终点"></a>给 rebase 指定起点终点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase --onto &lt;target&gt; &lt;start&gt; &lt;end&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>注意，不包括起点commit</p>
+<p>注意，不包括起点 commit</p>
 </blockquote>
 <h4 id="git-alias-setting"><a href="#git-alias-setting" class="headerlink" title="git alias setting"></a>git alias setting</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.ck checkout</span><br><span class="line">git config --global alias.com commit</span><br><span class="line">git config --global alias.tree &apos;git log --oneline --graph --decorate --all&apos;</span><br></pre></td></tr></table></figure>
 
 <h4 id="取消缓存的内容"><a href="#取消缓存的内容" class="headerlink" title="取消缓存的内容"></a>取消缓存的内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD</span><br></pre></td></tr></table></figure>
 
-<h4 id="HEAD和分支detach"><a href="#HEAD和分支detach" class="headerlink" title="HEAD和分支detach"></a>HEAD和分支detach</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --detached</span><br></pre></td></tr></table></figure>
+<h4 id="HEAD-和分支-detach"><a href="#HEAD-和分支-detach" class="headerlink" title="HEAD 和分支 detach"></a>HEAD 和分支 detach</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --detached</span><br></pre></td></tr></table></figure>
 
-<h4 id="detached后还原"><a href="#detached后还原" class="headerlink" title="detached后还原"></a>detached后还原</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="detached-后还原"><a href="#detached-后还原" class="headerlink" title="detached 后还原"></a>detached 后还原</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;branchName&gt;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -530,15 +529,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">前端优化</a>
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,7 +537,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">前端优化</a>
               </li>
             
             <div class="clearfix"></div>
