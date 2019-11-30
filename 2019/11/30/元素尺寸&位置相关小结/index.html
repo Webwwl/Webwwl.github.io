@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://Webwwl.github.io">
-  <title>Archives: 2019/10 | 吴文亮的个人网站</title>
+  <title>元素尺寸、位置相关小结 | 吴文亮的个人网站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端搬砖队长前来报道">
-<meta property="og:type" content="website">
-<meta property="og:title" content="吴文亮的个人网站">
-<meta property="og:url" content="https://Webwwl.github.io/archives/2019/10/index.html">
+  <meta name="description" content="元素尺寸、位置相关的属性很多，本文简单总结下。 可视区域相关123456// 可视区域宽高document.documentElement.widthwindow.innerWidthdocument.documentElement.heightwindow.innerHeight">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="元素尺寸、位置相关小结">
+<meta property="og:url" content="https://Webwwl.github.io/2019/11/30/元素尺寸&位置相关小结/index.html">
 <meta property="og:site_name" content="吴文亮的个人网站">
-<meta property="og:description" content="前端搬砖队长前来报道">
+<meta property="og:description" content="元素尺寸、位置相关的属性很多，本文简单总结下。 可视区域相关123456// 可视区域宽高document.documentElement.widthwindow.innerWidthdocument.documentElement.heightwindow.innerHeight">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-30T15:08:58.793Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="吴文亮的个人网站">
-<meta name="twitter:description" content="前端搬砖队长前来报道">
+<meta name="twitter:title" content="元素尺寸、位置相关小结">
+<meta name="twitter:description" content="元素尺寸、位置相关的属性很多，本文简单总结下。 可视区域相关123456// 可视区域宽高document.documentElement.widthwindow.innerWidthdocument.documentElement.heightwindow.innerHeight">
   
     <link rel="alternative" href="/atom.xml" title="吴文亮的个人网站" type="application/atom+xml">
   
@@ -157,264 +159,54 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-元素尺寸&amp;位置相关小结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      元素尺寸、位置相关小结
+    </h1>
+  
+
+        
+        <a href="/2019/11/30/元素尺寸&位置相关小结/" class="archive-article-date">
+  	<time datetime="2019-11-30T15:03:48.994Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>元素尺寸、位置相关的属性很多，本文简单总结下。</p>
+<h4 id="可视区域相关"><a href="#可视区域相关" class="headerlink" title="可视区域相关"></a>可视区域相关</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 可视区域宽高</span></span><br><span class="line"><span class="built_in">document</span>.documentElement.width</span><br><span class="line"><span class="built_in">window</span>.innerWidth</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.documentElement.height</span><br><span class="line"><span class="built_in">window</span>.innerHeight</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<h4 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 屏幕宽高</span></span><br><span class="line"><span class="built_in">window</span>.screen.width</span><br><span class="line"><span class="built_in">window</span>.screen.height</span><br></pre></td></tr></table></figure>
+
+<h4 id="元素宽高"><a href="#元素宽高" class="headerlink" title="元素宽高"></a>元素宽高</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">element.getClientRects() <span class="comment">// 获取元素布局盒子列表 </span></span><br><span class="line">element.getBoundingRect() <span class="comment">// 可以理解为所有盒子所占的区域  &#123;top: number; left: number; ...rest&#125;</span></span><br><span class="line"></span><br><span class="line">element.cilentWidth() <span class="comment">// content + padding</span></span><br><span class="line">element.offsetWidth() <span class="comment">// content + padding + border</span></span><br><span class="line"></span><br><span class="line">element.parent <span class="comment">// 返回一个指向最近的（指包含层级上的最近）包含该元素的定位元素或者最近的 table,td,th,body元素。</span></span><br><span class="line">element.offsetTop <span class="comment">// 距离offsetParent顶部内边距的距离</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>NOTE: getBoundingRect().top是与可视区域的距离，不用考虑滚动的情况。</p>
+</blockquote>
+<h4 id="滚动相关"><a href="#滚动相关" class="headerlink" title="滚动相关"></a>滚动相关</h4><h5 id="DOM结构"><a href="#DOM结构" class="headerlink" title="DOM结构"></a>DOM结构</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        div.container &#123;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin-top: 100px;</span><br><span class="line">            overflow: scroll;</span><br><span class="line">        &#125;</span><br><span class="line">        div.item &#123;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin: 0 30px;</span><br><span class="line">            padding: 0 50px;</span><br><span class="line">        &#125;</span><br><span class="line">        .item:nth-of-type(4n) &#123;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        .item:nth-of-type(4n + 1) &#123;</span><br><span class="line">            background: yellow;</span><br><span class="line">        &#125;</span><br><span class="line">        .item:nth-of-type(4n + 2) &#123;</span><br><span class="line">            background: blue;</span><br><span class="line">        &#125;</span><br><span class="line">        .item:nth-of-type(4n + 3) &#123;</span><br><span class="line">            background: green;</span><br><span class="line">        &#125;</span><br><span class="line">        div.container &#123;</span><br><span class="line">            height: 400px;</span><br><span class="line">            margin-top: 100px;</span><br><span class="line">            overflow: scroll;</span><br><span class="line">        &#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'item item1'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'item item2'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'item item3'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">'item item4'</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="假设contaienr内部已经向下滚动了了400px"><a href="#假设contaienr内部已经向下滚动了了400px" class="headerlink" title="假设contaienr内部已经向下滚动了了400px"></a>假设contaienr内部已经向下滚动了了400px</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">container.scrollTop  <span class="comment">// container内部滚动的距离</span></span><br><span class="line">container.scrollHeight <span class="comment">// container内部滚动元素的总高度，这里是1600px</span></span><br><span class="line">item2.getBoundingRect().top - container.getBoundingRect().top <span class="comment">// 获取item2与container上边框的距离</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="滚动API"><a href="#滚动API" class="headerlink" title="滚动API"></a>滚动API</h4><h6 id="可视区域滚动，api在window对象上"><a href="#可视区域滚动，api在window对象上" class="headerlink" title="可视区域滚动，api在window对象上"></a>可视区域滚动，api在window对象上</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scrollX  <span class="comment">// 是视口的属性，表示 X 方向上的当前滚动距离，有别名 pageXOffset；</span></span><br><span class="line">scrollY <span class="comment">// 是视口的属性，表示 Y 方向上的当前滚动距离，有别名 pageYOffset；</span></span><br><span class="line">scroll(x, y)  <span class="comment">// 使得页面滚动到特定的位置，有别名 scrollTo，支持传入配置型参数 &#123;top, left&#125;；</span></span><br><span class="line">scrollBy(x, y) <span class="comment">// 使得页面滚动特定的距离，支持传入配置型参数 &#123;top, left&#125;。</span></span><br></pre></td></tr></table></figure>
+
+<h6 id="元素滚动"><a href="#元素滚动" class="headerlink" title="元素滚动"></a>元素滚动</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">scrollTop <span class="comment">//元素的属性，表示 Y 方向上的当前滚动距离。</span></span><br><span class="line">scrollLeft <span class="comment">// 元素的属性，表示 X 方向上的当前滚动距离。</span></span><br><span class="line">scrollWidth <span class="comment">//元素的属性，表示元素内部的滚动内容的宽度，一般来说会大于等于元素宽度。</span></span><br><span class="line">scrollHeight <span class="comment">//元素的属性，表示元素内部的滚动内容的高度，一般来说会大于等于元素高度。</span></span><br><span class="line">scroll(x, y) <span class="comment">//使得元素滚动到特定的位置，有别名 scrollTo，支持传入配置型参数 &#123;top, left&#125;。</span></span><br><span class="line">scrollBy(x, y) <span class="comment">// 使得元素滚动到特定的位置，支持传入配置型参数 &#123;top, left&#125;。</span></span><br><span class="line">scrollIntoView(arg) <span class="comment">//滚动元素所在的父元素，使得元素滚动到可见区域，可以通过 arg 来指定滚到中间、开始或者就近。</span></span><br></pre></td></tr></table></figure>
+
+<p>可滚动的元素也支持 scroll 事件，我们在元素上监听它的事件即可：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.addEventListener(<span class="string">"scroll"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//......</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/29/提取word文本转html/" class="archive-article-date">
-  	<time datetime="2019-10-29T11:29:54.972Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/29/提取word文本转html/">提取word文本转html</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/26/Vue源码简析之Watch(下)/" class="archive-article-date">
-  	<time datetime="2019-10-26T07:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/26/Vue源码简析之Watch(下)/">Vue源码简析之Watcher（下）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/24/Vue源码简析之Watch(上)/" class="archive-article-date">
-  	<time datetime="2019-10-24T07:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/24/Vue源码简析之Watch(上)/">Vue源码简析之Watcher（上）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/eslint基本使用/" class="archive-article-date">
-  	<time datetime="2019-10-22T07:46:52.281Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/eslint基本使用/">eslint基本使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/21/Angular视图相关/" class="archive-article-date">
-  	<time datetime="2019-10-21T11:01:49.321Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/21/Angular视图相关/">Angular视图相关</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/20/git常用命令/" class="archive-article-date">
-  	<time datetime="2019-10-20T06:15:30.377Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/20/git常用命令/">Git常用命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/frontend_binary/" class="archive-article-date">
-  	<time datetime="2019-10-17T11:27:45.568Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/17/frontend_binary/">前端二进制数据处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -426,133 +218,116 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Webwwl.github.io/2019/11/30/元素尺寸&位置相关小结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/14/Vue源码简析之视图生成（下）/" class="archive-article-date">
-  	<time datetime="2019-10-14T10:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/29/设计模式之装饰者模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">设计模式之装饰者模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/14/Vue源码简析之视图生成（下）/">Vue源码简析之视图生成（下）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/Vue源码简析之视图生成（上）/" class="archive-article-date">
-  	<time datetime="2019-10-13T07:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/Vue源码简析之视图生成（上）/">Vue源码简析之视图生成（上）</a>
-    </h1>
+  <div id="SOHUCS" sid="元素尺寸&amp;位置相关小结" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cysX3aGWt",
+        conf: "prod_1dcda447175aada96edcdb7e412338fa"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/lazy_load/" class="archive-article-date">
-  	<time datetime="2019-10-13T06:55:12.218Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/lazy_load/">图片懒加载</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端优化</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -575,8 +350,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
